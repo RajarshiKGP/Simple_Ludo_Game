@@ -113,7 +113,7 @@ function moveA1() {
 
 CLB1.addEventListener('click', moveB1);
 function moveB1() {
-    if (turn == false && (home_B != 0 || way_B != 0) && (turnB == 0 || sixCount == 2)) {
+    if (turn == true && (home_B != 0 || way_B != 0) && (turnB == 0 || sixCount == 2)) {
         CLB1.innerHTML = "";
         CurLocB1 += Number(res.innerHTML);
         CLB1 = document.querySelector(`.B${CurLocB1}`);
