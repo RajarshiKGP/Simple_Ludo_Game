@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@500&family=Dancing+Script:wght@700&family=Heebo&family=Poppins:ital@1&family=Rubik+Moonrocks&family=Rubik:wght@400;600&family=Titan+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@500&family=Dancing+Script:wght@700&family=Heebo&family=Poppins:ital@1&family=Rubik+Moonrocks&family=Rubik:wght@400;600&family=Titan+One&display=swap');
+
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+}
+
+table .red-locker,
+.red-sublocker,
+.blue-locker,
+.blue-sublocker,
+.path,
+.path2 {
+    border: 1px black solid;
+    height: 4em;
+    width: 4em;
+    background-color: rgb(243, 248, 253);
+    border-radius: 6%;
+}
+
+.path2,
+.blue-sublocker {
+    position: relative;
+    left: 25.5em;
+}
+
+tr {
+    display: flex;
+}
+
+table .red-locker {
+    background-color: rgb(243, 79, 3);
+}
+
+table .red-sublocker {
+    background-color: rgba(232, 109, 52, 0.558);
+}
+
+table td p {
+    font-size: 26px;
+    position: relative;
+    top: -12%;
+    left: 25%;
+    font-weight: 800;
+    font-family: 'Rubik', sans-serif;;
+}
+
+table .blue-locker {
+    background-color: rgb(210, 9, 193);
+}
+
+table .blue-sublocker {
+    background-color: rgba(210, 9, 193, 0.381);
+}
+
+.grid {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+}
+
+.grid table {
+    align-self: center;
+    margin: 2em;
+}
+
+.container-A {
+    align-self: flex-start;
+    margin-top: 25px;
+    padding: 8px;
+    font-size: larger;
+    display: flex;
+    flex-flow: column;
+    border: 3px black solid;
+}
+
+.container-B {
+    align-self: flex-end;
+    margin-bottom: 25px;
+    padding: 8px;
+    font-size: larger;
+    display: flex;
+    flex-flow: column;
+    border: 3px black solid;
+}
+
+.container-A p,
+.container-B p {
+    margin: 1px;
+    text-align: center;
+}
+
+.container-A .A,
+.container-B .B {
+    font-size: 30px;
+}
+
+.turn {
+    display: flex;
+    flex-flow: column;
+    border: black 2px solid;
+    margin: 20px;
+    text-align: center;
+    width: 12%;
+    position: absolute;
+    margin: auto;
+    top: 38%;
+    left: 43.7%;
+}
+
+.turn .Turn,
+.turn .roll,
+.turn .result {
+    margin: 0px;
+}
+
+.turn .Turn,
+.turn .roll {
+    border-bottom: black 2px dashed;
+    font-size: 22px;
+    padding: 7px;
+    font-weight: 700;
+}
+
+.turn .Turn {
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+}
+
+.turn .roll {
+    background-color: rgba(190, 187, 187, 0.553);
+}
+
+.turn .result {
+    font-size: 27px;
+    padding: 2px;
+}
+
+button {
+    margin: auto;
+    position: absolute;
+    font-weight: bolder;
+    top: 40%;
+    left: 81%;
+    height: 60px;
+    width: fit-content;
+    border-radius: 999px;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    box-shadow: #0077ff 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    word-break: break-word;
+    border: 0;
+}
+
+button:active {
+    background-color: #00adff;
+    background-image: none;
+    box-shadow: none;
+}
