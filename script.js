@@ -67,7 +67,10 @@ A.addEventListener('click', function () {
         lockA--;
         home_A = 2 - (lockA + way_A);
         A.innerHTML = `${lockA}A`;
-        red_locker.innerHTML = `${home_A}A`;
+        if (lockA != 0)
+            red_locker.innerHTML = `${home_A}A`;
+        else
+            red_locker.innerHTML = `${home_A + 1}A`;
     }
 })
 
@@ -78,7 +81,10 @@ B.addEventListener('click', function () {
         lockB--;
         home_B = 2 - (lockB + way_B);
         B.innerHTML = `${lockB}B`;
-        blue_locker.innerHTML = `${home_B}B`;
+        if (lockB != 0)
+            blue_locker.innerHTML = `${home_B}B`;
+        else
+            blue_locker.innerHTML = `${home_B = 1}B`;
     }
 })
 
@@ -100,7 +106,7 @@ let CLB2 = document.querySelector(`.B${CurLocB2}`);
 CLA1.addEventListener('click', moveA1);
 function moveA1() {
     if (turn == false && (home_A != 0 || way_A != 0) && (turnA == 0 || sixCount == 2)) {
-        CLA1.innerHTML = "";
+        CLA1.innerHTML = " ";
         CurLocA1 += Number(res.innerHTML);
         CLA1 = document.querySelector(`#A${CurLocA1}`);
         console.log(CurLocA1);
@@ -110,11 +116,24 @@ function moveA1() {
         way_A++;
     }
 }
+CLA2.addEventListener('click', moveA2);
+function moveA2() {
+    if (turn == false && (home_A != 0 || way_A != 0) && (turnA == 0 || sixCount == 2)) {
+        CLA2.innerHTML = " ";
+        CurLocA2 += Number(res.innerHTML);
+        CLA2 = document.querySelector(`#A${CurLocA2}`);
+        console.log(CurLocA2);
+        console.log(CLA2);
+        CLA2.innerHTML = "1A";
+        home_A--;
+        way_A++;
+    }
+}
 
 CLB1.addEventListener('click', moveB1);
 function moveB1() {
     if (turn == true && (home_B != 0 || way_B != 0) && (turnB == 0 || sixCount == 2)) {
-        CLB1.innerHTML = "";
+        CLB1.innerHTML = " ";
         CurLocB1 += Number(res.innerHTML);
         CLB1 = document.querySelector(`.B${CurLocB1}`);
         console.log(CurLocB1);
@@ -124,3 +143,17 @@ function moveB1() {
         way_B++;
     }
 }
+CLB2.addEventListener('click', moveB2);
+function moveB2() {
+    if (turn == true && (home_B != 0 || way_B != 0) && (turnB == 0 || sixCount == 2)) {
+        CLB2.innerHTML = " ";
+        CurLocB2 += Number(res.innerHTML);
+        CLB2 = document.querySelector(`.B${CurLocB2}`);
+        console.log(CurLocB2);
+        console.log(CLB2);
+        CLB2.innerHTML = "1B";
+        home_B--;
+        way_B++;
+    }
+}
+
